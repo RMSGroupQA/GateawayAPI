@@ -72,9 +72,7 @@ public class Booking {
 				+ ", numberOfPeople=" + numberOfPeople + ", title=" + title + ", description=" + description + "]";
 	}
 
-	public Booking() {
-		
-	}
+	
 
 	
 }
