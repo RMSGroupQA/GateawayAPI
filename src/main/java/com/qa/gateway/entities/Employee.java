@@ -2,9 +2,9 @@ package com.qa.gateway.entities;
 
 import java.util.Set;
 
-public class User {
+public class Employee {
 
-	private long userID;
+	private long employeeID;
 	private Set<Booking> bookings;
 
 	private String forename;
@@ -13,12 +13,12 @@ public class User {
 	private String role;
 	private String email;
 
-	public long getUserID() {
-		return userID;
+	public long getEmployeeID() {
+		return employeeID;
 	}
 
-	public void setUserID(long userID) {
-		this.userID = userID;
+	public void setEmployeeID(long employeeID) {
+		this.employeeID = employeeID;
 	}
 
 	public String getForename() {
@@ -63,7 +63,7 @@ public class User {
 
 	@Override
 	public String toString() {
-		return "User [userID=" + userID + ", forename=" + forename + ", lastname=" + lastname + ", role=" + role
+		return "Employee [employeeID=" + employeeID + ", forename=" + forename + ", lastname=" + lastname + ", role=" + role
 				+ ", email=" + email + "]";
 	}
 

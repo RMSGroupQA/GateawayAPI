@@ -14,7 +14,7 @@ import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.client.RestTemplate;
 
 import com.qa.gateway.Constants;
-import com.qa.gateway.entities.User;
+import com.qa.gateway.entities.Employee;
 
 @RestController
 public class Controller {
@@ -25,30 +25,30 @@ public class Controller {
 
 	RestTemplate restTemplate;
 
-	@PostMapping("/getters/createUser")
-	public String createUser(@RequestBody User user) {
-		return restTemplate.postForEntity(Constants.CREATEEMPLOYEE, user, String.class).getBody();
+	@PostMapping("/getters/createEmployee")
+	public String createUser(@RequestBody Employee employee) {
+		return restTemplate.postForEntity(Constants.CREATEEMPLOYEE, employee, String.class).getBody();
 	}
 
-	@GetMapping("/getters/readUser/{id}")
-	public String readUser(@PathVariable("id") long id) {
+	@GetMapping("/getters/readEmployee/{id}")
+	public String readEmployee(@PathVariable("id") long id) {
 		return restTemplate.getForEntity(Constants.READEMPLOYEE + id, String.class).getBody();
 	}
 	
-	@PutMapping("/getters/updateUserPassword/{id}")
+	@PutMapping("/getters/updateEmployeePassword/{id}")
 	public String updatePassword(@PathVariable("id") long id, @RequestBody String password) {
 		return restTemplate.exchange(Constants.UPDATEEMPLOYEEPASS + id, HttpMethod.PUT, 
 				new HttpEntity<String>(password, null), String.class).getBody();
 	}
 	
-	@PutMapping("/getters/updateUserRole/{id}")
+	@PutMapping("/getters/updateEmployeeRole/{id}")
 	public String updateRole(@PathVariable("id") long id, @RequestBody String role) {
 		return restTemplate.exchange(Constants.UPDATEEMPLOYEEROLE + id, HttpMethod.PUT, 
 				new HttpEntity<String>(role, null), String.class).getBody();
 	}
 	
-	@DeleteMapping("/getters/deleteUser/{id}")
-	public String deleteUser(@PathVariable("id") long id) {
+	@DeleteMapping("/getters/deleteEmployee/{id}")
+	public String deleteEmployee(@PathVariable("id") long id) {
 		return restTemplate.exchange(Constants.DELETEEMPLOYEE + id, HttpMethod.DELETE, 
 				null, String.class).getBody();
 	}

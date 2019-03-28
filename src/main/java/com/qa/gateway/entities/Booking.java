@@ -6,7 +6,7 @@ public class Booking {
 	
 	private Room room;
 	
-	private User user;
+	private Employee employee;
 
 	private String startTime;
 	private String endTime;
@@ -22,8 +22,8 @@ public class Booking {
 		return room;
 	}
 
-	public User getUser() {
-		return user;
+	public Employee getEmployee() {
+		return employee;
 	}
 
 	public String getStartTime() {
