@@ -77,18 +77,5 @@ public class Booking {
 		
 	}
 
-	public Booking(Room room, User user, String startTime, String endTime, int numberOfPeople,
-			String title, String description) {
-		super();
-		this.room = room;
-		this.user = user;
-		this.startTime = startTime;
-		this.endTime = endTime;
-		this.title = title;
-		this.description = description;
-	}
 	
-	
-	
-
 }
