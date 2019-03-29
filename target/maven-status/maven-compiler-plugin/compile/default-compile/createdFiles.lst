@@ -1,0 +1,5 @@
+com\qa\gatewayapi\controller\Room.class
+com\qa\gatewayapi\controller\User.class
+com\qa\gatewayapi\controller\Booking.class
+com\qa\gatewayapi\GatewayApiApplication.class
+com\qa\gatewayapi\controller\Controller.class
