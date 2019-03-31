@@ -1,9 +1,12 @@
 package com.qa.gateway.service;
 
+import org.springframework.stereotype.Service;
+
 import com.qa.gateway.entities.Booking;
 import com.qa.gateway.entities.Employee;
 import com.qa.gateway.repo.EmployeeRepo;
 
+@Service
 public class EmployeeService implements EmployeeServiceInterface{
 	
 	private EmployeeRepo repo;

@@ -1,10 +1,13 @@
 package com.qa.gateway.service;
 
+import org.springframework.stereotype.Service;
+
 import com.qa.gateway.entities.Booking;
 import com.qa.gateway.entities.Room;
 import com.qa.gateway.repo.BookingRepo;
 import com.qa.gateway.repo.RoomRepo;
 
+@Service
 public class RoomService implements RoomServiceInterface{
 
 	private RoomRepo roomRepo;

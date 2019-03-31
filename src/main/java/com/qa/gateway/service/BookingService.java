@@ -1,8 +1,11 @@
 package com.qa.gateway.service;
 
+import org.springframework.stereotype.Service;
+
 import com.qa.gateway.entities.Booking;
 import com.qa.gateway.repo.BookingRepo;
 
+@Service
 public class BookingService implements BookingServiceInterface {
 
 	private BookingRepo repo;
