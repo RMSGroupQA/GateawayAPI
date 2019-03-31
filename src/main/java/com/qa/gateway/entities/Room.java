@@ -2,9 +2,21 @@ package com.qa.gateway.entities;
 
 import java.util.Set;
 
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.OneToMany;
+
+import org.hibernate.annotations.GenericGenerator;
+
 public class Room {
 
+	@Id
+	@GeneratedValue(generator = "native", strategy = GenerationType.AUTO)
+	@GenericGenerator(name = "native", strategy = "native")
 	private long roomID;
+
+	@OneToMany(mappedBy = "room")
 	private Set<Booking> bookings;
 
 	public Set<Booking> getBookings() {
@@ -71,5 +83,4 @@ public class Room {
 				+ ", roomName=" + roomName + ", numOfSeats=" + numOfSeats + ", numOfComputers=" + numOfComputers + "]";
 	}
 
-	
 }

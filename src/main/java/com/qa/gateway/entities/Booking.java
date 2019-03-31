@@ -1,11 +1,28 @@
 package com.qa.gateway.entities;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
+
+import org.hibernate.annotations.GenericGenerator;
+
+@Entity
 public class Booking {
 
+	@Id
+	@GeneratedValue(generator="native", strategy=GenerationType.AUTO)
+	@GenericGenerator(name="native", strategy="native")
 	private long bookingID;
 	
+	@ManyToOne
+	@JoinColumn(name = "roomID")
 	private Room room;
 	
+	@ManyToOne
+	@JoinColumn(name = "employeeID")
 	private Employee employee;
 
 	private String startTime;

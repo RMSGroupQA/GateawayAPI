@@ -17,9 +17,9 @@ import com.qa.gateway.Constants;
 import com.qa.gateway.entities.Employee;
 
 @RestController
-public class Controller {
+public class GatewayController {
 
-	public Controller(RestTemplateBuilder restBuilder) {
+	public GatewayController(RestTemplateBuilder restBuilder) {
 		this.restTemplate = restBuilder.build();
 	}
 
