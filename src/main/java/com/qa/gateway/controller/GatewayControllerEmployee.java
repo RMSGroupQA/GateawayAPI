@@ -17,9 +17,9 @@ import com.qa.gateway.Constants;
 import com.qa.gateway.entities.Employee;
 
 @RestController
-public class GatewayController {
+public class GatewayControllerEmployee {
 
-	public GatewayController(RestTemplateBuilder restBuilder) {
+	public GatewayControllerEmployee(RestTemplateBuilder restBuilder) {
 		this.restTemplate = restBuilder.build();
 	}
 
@@ -30,26 +30,26 @@ public class GatewayController {
 		return restTemplate.postForEntity(Constants.CREATEEMPLOYEE, employee, String.class).getBody();
 	}
 
-	@GetMapping("/getters/readEmployee/{id}")
-	public String readEmployee(@PathVariable("id") long id) {
-		return restTemplate.getForEntity(Constants.READEMPLOYEE + id, String.class).getBody();
+	@GetMapping("/getters/readEmployee/{email}")
+	public String readEmployee(@PathVariable("email") String email) {
+		return restTemplate.getForEntity(Constants.READEMPLOYEE + email, String.class).getBody();
 	}
 	
-	@PutMapping("/getters/updateEmployeePassword/{id}")
-	public String updatePassword(@PathVariable("id") long id, @RequestBody String password) {
-		return restTemplate.exchange(Constants.UPDATEEMPLOYEEPASS + id, HttpMethod.PUT, 
+	@PutMapping("/getters/updateEmployeePassword/{email}")
+	public String updatePassword(@PathVariable("email") String email, @RequestBody String password) {
+		return restTemplate.exchange(Constants.UPDATEEMPLOYEEPASS + email, HttpMethod.PUT, 
 				new HttpEntity<String>(password, null), String.class).getBody();
 	}
 	
-	@PutMapping("/getters/updateEmployeeRole/{id}")
-	public String updateRole(@PathVariable("id") long id, @RequestBody String role) {
-		return restTemplate.exchange(Constants.UPDATEEMPLOYEEROLE + id, HttpMethod.PUT, 
+	@PutMapping("/getters/updateEmployeeRole/{email}")
+	public String updateRole(@PathVariable("email") String email, @RequestBody String role) {
+		return restTemplate.exchange(Constants.UPDATEEMPLOYEEROLE + email, HttpMethod.PUT, 
 				new HttpEntity<String>(role, null), String.class).getBody();
 	}
 	
-	@DeleteMapping("/getters/deleteEmployee/{id}")
-	public String deleteEmployee(@PathVariable("id") long id) {
-		return restTemplate.exchange(Constants.DELETEEMPLOYEE + id, HttpMethod.DELETE, 
+	@DeleteMapping("/getters/deleteEmployee/{email}")
+	public String deleteEmployee(@PathVariable("email") String email) {
+		return restTemplate.exchange(Constants.DELETEEMPLOYEE + email, HttpMethod.DELETE, 
 				null, String.class).getBody();
 	}
 
