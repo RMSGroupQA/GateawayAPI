@@ -1,0 +1,6 @@
+com/qa/gateway/Constants.class
+com/qa/gateway/entities/Employee.class
+com/qa/gateway/entities/Room.class
+com/qa/gateway/controller/Controller.class
+com/qa/gateway/entities/Booking.class
+com/qa/gateway/GatewayApplication.class

@@ -1,0 +1,5 @@
+/home/jenkins/rmssystem/rms_gateway/src/test/java/com/qa/gateway/Runner.java
+/home/jenkins/rmssystem/rms_gateway/src/test/java/com/qa/gateway/GatewayApplicationTests.java
+/home/jenkins/rmssystem/rms_gateway/src/test/java/com/qa/gateway/entities/RoomEntityTest.java
+/home/jenkins/rmssystem/rms_gateway/src/test/java/com/qa/gateway/entities/BookingEntityTest.java
+/home/jenkins/rmssystem/rms_gateway/src/test/java/com/qa/gateway/entities/EmployeeEntityTest.java

@@ -1,6 +1,0 @@
-projectKey=com.qa:Gateway
-serverUrl=http://localhost:9000
-serverVersion=6.7.6.38781
-dashboardUrl=http://localhost:9000/dashboard/index/com.qa:Gateway
-ceTaskId=AWnEyT2k5MzjJE2-DHVy
-ceTaskUrl=http://localhost:9000/api/ce/task?id=AWnEyT2k5MzjJE2-DHVy

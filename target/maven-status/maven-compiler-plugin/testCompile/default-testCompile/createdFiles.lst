@@ -1,0 +1,5 @@
+com/qa/gateway/entities/RoomEntityTest.class
+com/qa/gateway/entities/BookingEntityTest.class
+com/qa/gateway/entities/EmployeeEntityTest.class
+com/qa/gateway/Runner.class
+com/qa/gateway/GatewayApplicationTests.class
