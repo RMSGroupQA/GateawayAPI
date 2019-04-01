@@ -10,15 +10,10 @@ import javax.persistence.OneToMany;
 
 import org.hibernate.annotations.GenericGenerator;
 
-@Entity
 public class Room {
 
-	@Id
-	@GeneratedValue(generator = "native", strategy = GenerationType.AUTO)
-	@GenericGenerator(name = "native", strategy = "native")
 	private long roomID;
 
-	@OneToMany(mappedBy = "room")
 	private Set<Booking> bookings;
 
 	public Set<Booking> getBookings() {

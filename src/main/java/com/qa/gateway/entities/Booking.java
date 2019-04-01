@@ -9,20 +9,12 @@ import javax.persistence.ManyToOne;
 
 import org.hibernate.annotations.GenericGenerator;
 
-@Entity
 public class Booking {
 
-	@Id
-	@GeneratedValue(generator="native", strategy=GenerationType.AUTO)
-	@GenericGenerator(name="native", strategy="native")
 	private long bookingID;
 	
-	@ManyToOne
-	@JoinColumn(name = "roomID")
 	private Room room;
 	
-	@ManyToOne
-	@JoinColumn(name = "employeeID")
 	private Employee employee;
 
 	private String startTime;
