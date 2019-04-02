@@ -1,15 +1,10 @@
 package com.qa.gateway.entities;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import javax.persistence.JoinColumn;
-import javax.persistence.ManyToOne;
-
-import org.hibernate.annotations.GenericGenerator;
-
 public class Booking {
+
+	public void setBookingID(long bookingID) {
+		this.bookingID = bookingID;
+	}
 
 	private long bookingID;
 	
@@ -27,14 +22,6 @@ public class Booking {
 		return bookingID;
 	}
 	
-	public Room getRoom() {
-		return room;
-	}
-
-	public Employee getEmployee() {
-		return employee;
-	}
-
 	public String getStartTime() {
 		return startTime;
 	}

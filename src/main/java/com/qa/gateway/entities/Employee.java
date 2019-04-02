@@ -2,14 +2,6 @@ package com.qa.gateway.entities;
 
 import java.util.Set;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import javax.persistence.OneToMany;
-
-import org.hibernate.annotations.GenericGenerator;
-
 public class Employee {
 
 	private long employeeID;
@@ -74,14 +66,6 @@ public class Employee {
 	public String toString() {
 		return "Employee [employeeID=" + employeeID + ", forename=" + forename + ", lastname=" + lastname + ", role=" + role
 				+ ", email=" + email + "]";
-	}
-
-	public Set<Booking> getBookings() {
-		return bookings;
-	}
-
-	public void setBookings(Set<Booking> bookings) {
-		this.bookings = bookings;
 	}
 
 }

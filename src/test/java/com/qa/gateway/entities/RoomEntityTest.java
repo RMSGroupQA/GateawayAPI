@@ -42,7 +42,13 @@ public class RoomEntityTest {
 		testRoom.setNumOfComputers(1);
 		assertEquals(1, testRoom.getNumOfComputers());
 	}
-
+	
+	@Test
+	public void IDTest() {
+		testRoom.setRoomID(1);
+		assertEquals(1, testRoom.getRoomID());
+	}
+	
 	@Test
 	public void StringTest() {
 		assertEquals("Room [roomID=0, bookings=null, building=null, floor=null, roomName=null, numOfSeats=0, numOfComputers=0]", testRoom.toString());

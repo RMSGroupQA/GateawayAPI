@@ -2,27 +2,11 @@ package com.qa.gateway.entities;
 
 import java.util.Set;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import javax.persistence.OneToMany;
-
-import org.hibernate.annotations.GenericGenerator;
-
 public class Room {
 
 	private long roomID;
 
 	private Set<Booking> bookings;
-
-	public Set<Booking> getBookings() {
-		return bookings;
-	}
-
-	public void setBookings(Set<Booking> bookings) {
-		this.bookings = bookings;
-	}
 
 	private String building;
 	private String floor;
@@ -32,6 +16,10 @@ public class Room {
 
 	public long getRoomID() {
 		return roomID;
+	}
+	
+	public void setRoomID(long roomID) {
+		this.roomID = roomID;
 	}
 
 	public String getBuilding() {

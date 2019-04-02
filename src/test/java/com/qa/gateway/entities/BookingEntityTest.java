@@ -44,6 +44,12 @@ public class BookingEntityTest {
 	}
 	
 	@Test
+	public void IDTest() {
+		testBook.setBookingID(2);
+		assertEquals(2, testBook.getBookingID());
+	}
+	
+	@Test
 	public void StringTest() {
 		assertEquals("Booking [bookingID=0, startTime=null, endTime=null, numberOfPeople=1, title=null, description=null]", testBook.toString());
 	}
