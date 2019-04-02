@@ -4,7 +4,7 @@ import java.net.URI;
 
 public class Constants {
 	
-	public final static String CREATEEMPLOYEE= "http://localhost:8082/createEmployee";
+	public final static String CREATEEMPLOYEE= "http://localhost:8083/createEmployee";
 	public final static String READEMPLOYEE= "http://localhost:8082/readEmployee/";
 	public final static String UPDATEEMPLOYEEROLE= "http://localhost:8082/updateEmployeeRole/";
 	public final static String UPDATEEMPLOYEEPASS= "http://localhost:8082/updateEmployeePassword/";
@@ -18,5 +18,4 @@ public class Constants {
 	public final static String UPDATEBOOKING= "http://localhost:8082/updateBooking/";
 	public final static String DELETEBOOKING= "http://localhost:8082/deleteBooking/";
 	
-
 }

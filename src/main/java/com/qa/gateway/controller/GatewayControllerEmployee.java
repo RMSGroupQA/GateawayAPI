@@ -34,33 +34,22 @@ public class GatewayControllerEmployee {
 	public String readEmployee(@PathVariable("email") String email) {
 		return restTemplate.getForEntity(Constants.READEMPLOYEE + email, String.class).getBody();
 	}
-	
+
 	@PutMapping("/getters/updateEmployeePassword/{email}")
 	public String updatePassword(@PathVariable("email") String email, @RequestBody String password) {
-		return restTemplate.exchange(Constants.UPDATEEMPLOYEEPASS + email, HttpMethod.PUT, 
+		return restTemplate.exchange(Constants.UPDATEEMPLOYEEPASS + email, HttpMethod.PUT,
 				new HttpEntity<String>(password, null), String.class).getBody();
 	}
-	
+
 	@PutMapping("/getters/updateEmployeeRole/{email}")
 	public String updateRole(@PathVariable("email") String email, @RequestBody String role) {
-		return restTemplate.exchange(Constants.UPDATEEMPLOYEEROLE + email, HttpMethod.PUT, 
+		return restTemplate.exchange(Constants.UPDATEEMPLOYEEROLE + email, HttpMethod.PUT,
 				new HttpEntity<String>(role, null), String.class).getBody();
 	}
-	
+
 	@DeleteMapping("/getters/deleteEmployee/{email}")
 	public String deleteEmployee(@PathVariable("email") String email) {
-		return restTemplate.exchange(Constants.DELETEEMPLOYEE + email, HttpMethod.DELETE, 
-				null, String.class).getBody();
-	}
-
-	@RequestMapping("/verify")
-	public String verify() {
-		return restTemplate.exchange("http://localhost:8083/", HttpMethod.GET, null, String.class).getBody();
-	}
-
-	@RequestMapping("/group")
-	public String groupbooking() {
-		return restTemplate.exchange("http://localhost:8084/", HttpMethod.GET, null, String.class).getBody();
+		return restTemplate.exchange(Constants.DELETEEMPLOYEE + email, HttpMethod.DELETE, null, String.class).getBody();
 	}
 
 }

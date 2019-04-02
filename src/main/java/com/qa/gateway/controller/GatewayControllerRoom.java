@@ -29,19 +29,19 @@ public class GatewayControllerRoom {
 		return restTemplate.postForEntity(Constants.CREATEROOM, room, String.class).getBody();
 	}
 
-	@GetMapping("/getters/readRoom/{id}")
-	public String readRoom(@PathVariable("id") long id) {
-		return restTemplate.getForEntity(Constants.READROOM + id, String.class).getBody();
+	@GetMapping("/getters/readRoom/{roomName}")
+	public String readRoom(@PathVariable("roomName") String roomName) {
+		return restTemplate.getForEntity(Constants.READROOM + roomName, String.class).getBody();
 	}
 
-	@PutMapping("/getters/updateRoom/{id}")
-	public String updateRoom(@PathVariable("id") long id, @RequestBody String password) {
-		return restTemplate.exchange(Constants.UPDATEROOM + id, HttpMethod.PUT,
+	@PutMapping("/getters/updateRoom/{roomName}")
+	public String updateRoom(@PathVariable("roomName") String roomName, @RequestBody String password) {
+		return restTemplate.exchange(Constants.UPDATEROOM + roomName, HttpMethod.PUT,
 				new HttpEntity<String>(password, null), String.class).getBody();
 	}
 
-	@DeleteMapping("/getters/deleteRoom/{id}")
-	public String deleteRoom(@PathVariable("id") long id) {
-		return restTemplate.exchange(Constants.DELETEROOM + id, HttpMethod.DELETE, null, String.class).getBody();
+	@DeleteMapping("/getters/deleteRoom/{roomName}")
+	public String deleteRoom(@PathVariable("roomName") String roomName) {
+		return restTemplate.exchange(Constants.DELETEROOM + roomName, HttpMethod.DELETE, null, String.class).getBody();
 	}
 }
