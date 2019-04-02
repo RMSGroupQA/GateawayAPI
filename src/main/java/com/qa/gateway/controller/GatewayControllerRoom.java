@@ -34,12 +34,6 @@ public class GatewayControllerRoom {
 		return restTemplate.getForEntity(Constants.READROOM + roomName, String.class).getBody();
 	}
 
-	@PutMapping("/getters/updateRoom/{roomName}")
-	public String updateRoom(@PathVariable("roomName") String roomName, @RequestBody String password) {
-		return restTemplate.exchange(Constants.UPDATEROOM + roomName, HttpMethod.PUT,
-				new HttpEntity<String>(password, null), String.class).getBody();
-	}
-
 	@DeleteMapping("/getters/deleteRoom/{roomName}")
 	public String deleteRoom(@PathVariable("roomName") String roomName) {
 		return restTemplate.exchange(Constants.DELETEROOM + roomName, HttpMethod.DELETE, null, String.class).getBody();
